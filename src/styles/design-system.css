@@ -1,0 +1,361 @@
+/**
+ * Design System - نظام التصميم الموحد
+ * 
+ * هذا الملف يحتوي على جميع المتغيرات والقواعد الموحدة للتصميم
+ */
+
+@layer base {
+
+  /* ============ SPACING SYSTEM ============ */
+  :root {
+    --spacing-xs: 0.25rem;
+    /* 4px */
+    --spacing-sm: 0.5rem;
+    /* 8px */
+    --spacing-md: 1rem;
+    /* 16px */
+    --spacing-lg: 1.5rem;
+    /* 24px */
+    --spacing-xl: 2rem;
+    /* 32px */
+    --spacing-2xl: 3rem;
+    /* 48px */
+    --spacing-3xl: 4rem;
+    /* 64px */
+  }
+
+  /* ============ TYPOGRAPHY SYSTEM ============ */
+  :root {
+    --font-size-xs: 0.8125rem;
+    /* 13px - Better readability */
+    --font-size-sm: 0.875rem;
+    /* 14px */
+    --font-size-base: 1rem;
+    /* 16px */
+    --font-size-lg: 1.125rem;
+    /* 18px */
+    --font-size-xl: 1.25rem;
+    /* 20px */
+    --font-size-2xl: 1.5rem;
+    /* 24px */
+    --font-size-3xl: 1.875rem;
+    /* 30px */
+    --font-size-4xl: 2.25rem;
+    /* 36px */
+
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --line-height-tight: 1.25;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.75;
+  }
+
+  /* ============ BORDER RADIUS SYSTEM ============ */
+  :root {
+    --radius-sm: 0.25rem;
+    /* 4px */
+    --radius-md: 0.5rem;
+    /* 8px */
+    --radius-lg: 0.75rem;
+    /* 12px */
+    --radius-xl: 1rem;
+    /* 16px */
+    --radius-full: 9999px;
+  }
+
+  /* ============ SHADOW SYSTEM ============ */
+  :root {
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  /* ============ TRANSITION SYSTEM ============ */
+  :root {
+    --transition-fast: 150ms ease-in-out;
+    --transition-base: 200ms ease-in-out;
+    --transition-slow: 300ms ease-in-out;
+    --transition-slower: 500ms ease-in-out;
+  }
+
+  /* ============ Z-INDEX SYSTEM ============ */
+  :root {
+    --z-base: 0;
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+  }
+
+  /* ============ COMPONENT SPECIFIC ============ */
+
+  /* Button Sizes */
+  :root {
+    --button-height-sm: 2rem;
+    /* 32px */
+    --button-height-md: 2.5rem;
+    /* 40px */
+    --button-height-lg: 3rem;
+    /* 48px */
+    --button-padding-x-sm: 0.75rem;
+    /* 12px */
+    --button-padding-x-md: 1rem;
+    /* 16px */
+    --button-padding-x-lg: 1.5rem;
+    /* 24px */
+  }
+
+  /* Input Sizes */
+  :root {
+    --input-height-sm: 2rem;
+    /* 32px */
+    --input-height-md: 2.5rem;
+    /* 40px */
+    --input-height-lg: 3rem;
+    /* 48px */
+    --input-padding-x: 0.75rem;
+    /* 12px */
+  }
+
+  /* Card Sizes */
+  :root {
+    --card-padding: 1.5rem;
+    /* 24px */
+    --card-padding-sm: 1rem;
+    /* 16px */
+    --card-padding-lg: 2rem;
+    /* 32px */
+  }
+
+  /* Dialog Sizes */
+  :root {
+    --dialog-width-sm: 24rem;
+    /* 384px */
+    --dialog-width-md: 32rem;
+    /* 512px */
+    --dialog-width-lg: 42rem;
+    /* 672px */
+    --dialog-width-xl: 56rem;
+    /* 896px */
+  }
+
+  /* Table Sizes */
+  :root {
+    --table-cell-padding-x: 1rem;
+    /* 16px */
+    --table-cell-padding-y: 0.75rem;
+    /* 12px */
+  }
+}
+
+/* ============ UTILITY CLASSES ============ */
+
+@layer utilities {
+
+  /* Spacing Utilities */
+  .gap-xs {
+    gap: var(--spacing-xs);
+  }
+
+  .gap-sm {
+    gap: var(--spacing-sm);
+  }
+
+  .gap-md {
+    gap: var(--spacing-md);
+  }
+
+  .gap-lg {
+    gap: var(--spacing-lg);
+  }
+
+  .gap-xl {
+    gap: var(--spacing-xl);
+  }
+
+  /* Typography Utilities */
+  .text-xs {
+    font-size: var(--font-size-xs);
+  }
+
+  .text-sm {
+    font-size: var(--font-size-sm);
+  }
+
+  .text-base {
+    font-size: var(--font-size-base);
+  }
+
+  .text-lg {
+    font-size: var(--font-size-lg);
+  }
+
+  .text-xl {
+    font-size: var(--font-size-xl);
+  }
+
+  .text-2xl {
+    font-size: var(--font-size-2xl);
+  }
+
+  .text-3xl {
+    font-size: var(--font-size-3xl);
+  }
+
+  .text-4xl {
+    font-size: var(--font-size-4xl);
+  }
+
+  /* Font Weight Utilities */
+  .font-normal {
+    font-weight: var(--font-weight-normal);
+  }
+
+  .font-medium {
+    font-weight: var(--font-weight-medium);
+  }
+
+  .font-semibold {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .font-bold {
+    font-weight: var(--font-weight-bold);
+  }
+
+  /* Transition Utilities */
+  .transition-fast {
+    transition: all var(--transition-fast);
+  }
+
+  .transition-base {
+    transition: all var(--transition-base);
+  }
+
+  .transition-slow {
+    transition: all var(--transition-slow);
+  }
+
+  .transition-slower {
+    transition: all var(--transition-slower);
+  }
+}
+
+/* ============ ANIMATIONS ============ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ============ FOCUS STATES ============ */
+
+.focus-ring {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+}
+
+/* ============ LOADING STATES ============ */
+
+.skeleton {
+  @apply animate-pulse bg-muted rounded;
+}
+
+/* ============ EMPTY STATES ============ */
+
+.empty-state {
+  @apply flex flex-col items-center justify-center py-12 text-center;
+}
+
+.empty-state-icon {
+  @apply h-12 w-12 text-muted-foreground mb-4;
+}
+
+.empty-state-title {
+  @apply text-lg font-semibold text-foreground mb-2;
+}
+
+.empty-state-description {
+  @apply text-sm text-muted-foreground max-w-md;
+}
+
+/* ============ ERROR STATES ============ */
+
+.error-state {
+  @apply flex flex-col items-center justify-center py-12 text-center;
+}
+
+.error-state-icon {
+  @apply h-12 w-12 text-destructive mb-4;
+}
+
+.error-state-title {
+  @apply text-lg font-semibold text-foreground mb-2;
+}
+
+.error-state-description {
+  @apply text-sm text-muted-foreground max-w-md;
+}
